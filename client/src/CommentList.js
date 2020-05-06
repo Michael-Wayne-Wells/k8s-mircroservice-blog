@@ -7,11 +7,11 @@ export default ({ comments }) => {
       case "approved":
         content = comment.content;
         break;
-      case "pending":
-        content = "This comment is awaiting approval";
-        break;
       case "rejected":
         content = "This comment has been rejected!";
+        break;
+      default:
+        content = "This comment is awaiting approval";
         break;
     }
     return <li key={comment.id}>{content}</li>;
