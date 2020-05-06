@@ -3,7 +3,6 @@ import React from "react";
 export default ({ comments }) => {
   const renderedComments = comments.map((comment) => {
     let content;
-
     switch (comment.status) {
       case "approved":
         content = comment.content;
